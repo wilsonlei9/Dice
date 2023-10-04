@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function initialize()
+        {
+            num = 0;
+            num2 = 0;
+            sum = 0;
+            outputDiv = document.getElementById("dice1");
+            outputDiv2 = document.getElementById("dice2");
+            outputDiv3 = document.getElementById("total");
+            
+        }
+
+        function random()
+        {
+            num = parseInt(Math.random() * 6);
+            num2 = parseInt(Math.random() * 6);
+            sum = num + num2;
+            display();
+        }
+
+        function display()
+        {
+            outputDiv.innerHTML = num;
+            outputDiv2.innerHTML = num2;
+            outputDiv3.innerHTML = sum;
+        }
+    </script>
+</head>
+<body onload = "initialize();">
+    <div id = "dice1";>
+        
+    </div>
+    <div id = "dice2";>
+        
+    </div>
+    <div id = "total";>
+
+    </div>
+    <button onclick = "random()";>Click me</button>
+</body>
+</html>
